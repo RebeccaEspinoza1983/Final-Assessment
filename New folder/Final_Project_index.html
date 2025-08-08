@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rebecca's Reflection</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      margin: 0;
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in;
+      position: relative;
+      z-index: 0;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    nav button {
+      background-color: #4285f4;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 0 10px #4285f4;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    nav button:hover { box-shadow: 0 0 15px #00ffff; }
+    h1 {
+      text-align: center;
+      color: #00ffff;
+      animation: glowPulse 2s infinite;
+    }
+    @keyframes glowPulse {
+      0%, 100% { text-shadow: 0 0 10px #00ffff; }
+      50% { text-shadow: 0 0 20px #00ffff; }
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffff;
+      animation: fadeIn 2s ease-in;
+    }
+    p { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <nav>
+    <button onclick="location.href='index.html'">Reflection</button>
+    <button onclick="location.href='skills.html'">Skills & Growth</button>
+  </nav>
+
+  <h1>Rebecca's Reflection</h1>
+  <section>
+    <p>
+      This course has been a transformative journey. I started out intimidated by technical challenges, but now I approach them with curiosity and confidence. Debugging used to feel overwhelming, but persistence has turned it into a skill I’m proud of.
+    </p>
+    <p>
+      Building my final website helped me connect everything I’ve learned—from HTML and CSS to accessibility and design. I’ve grown not just as a web developer, but as a problem-solver.
+    </p>
+  </section>
+</body>
+</html>
